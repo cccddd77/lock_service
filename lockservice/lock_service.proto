@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option go_package = "github.com/cccddd77/lock_service/lockservice";
+
+package lockservice;
+
+service LockService {
+    rpc DoLock(Req) returns (Rsp) {}
+    rpc UnLock(Req) returns (Rsp) {}
+}
+
+message Req {
+    int64 CliID = 1;
+    string operator = 2;
+}
+
+message Rsp {
+    int64 CliID = 1;
+    string operator = 2;
+    string msg = 3;
+}
