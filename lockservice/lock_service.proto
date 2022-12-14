@@ -16,6 +16,6 @@ message Req {
 
 message Rsp {
     int64 CliID = 1;
-    string operator = 2;
-    string msg = 3;
+    string Operator = 2;
+    string Msg = 3;
 }
